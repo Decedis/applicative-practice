@@ -10,12 +10,12 @@ export function getPlanetsWithMassValue(data, number) {
     if(number >= 1 && number <= 7){
         if(number >= 1){
             massPlanets = data.planets
-            .filter(planet => {return (planet.mass.massValue >= number)})
-            .map(mass => {return mass.name});
+              .filter(planet => {return (planet.mass.massValue >= number)})
+              .map(mass => {return mass.name});
         } else if( number <= 7){
             massPlanets = data.planets
-            .filter(planet => {return (planet.mass.massValue <= number)})
-            .map(mass => {return mass.name});
+              .filter(planet => {return (planet.mass.massValue <= number)})
+              .map(mass => {return mass.name});
         } else {
             massPlanets = [];
         }
