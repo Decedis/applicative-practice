@@ -8,8 +8,8 @@ import { data } from "../data/data";
 export function lowMoonsPlanets(data) {
   // Your code goes here...
   const lowMoons = data.planets 
-    .filter(planet => {return planet.moons.length < 10})
-    .map (planet => {return planet.name});
+    .filter(planet => {return planet.moons === undefined || planet.moons.length < 10})
+    .map(planet => {return planet.name})
   return lowMoons;
 }
 
